@@ -15,7 +15,7 @@ app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 
 connect_db(app)
-#toolbar = DebugToolbarExtension(app) -- causes error
+#toolbar = DebugToolbarExtension(app) -- causes error everytime it runs
 
 @app.route('/')
 def home_page():
@@ -24,9 +24,9 @@ def home_page():
 @app.route('/register' , methods=['GET' , 'POST'])
 def register_form():
     """Show register form and process the register form by adding a new user"""
-    form = RegisterForm() #in the form.py
+    form = RegisterForm()   #in the form.py
 
-    if form.validate_on_submit(): #getting all the data from the form
+    if form.validate_on_submit():    #getting all the data from the form
         username = form.username.data
         password = form.password.data
         email = form.email.data
