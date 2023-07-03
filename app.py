@@ -1,10 +1,9 @@
-
 from flask import Flask, render_template, redirect, session
 from flask_debugtoolbar import DebugToolbarExtension
 from werkzeug.exceptions import Unauthorized
 
-from models import connect_db, db, User,Feedback
-from forms import RegisterForm,LoginForm,FeedbackForm,DeleteForm
+from models import connect_db, db, User, Feedback
+from forms import RegisterForm, LoginForm, FeedbackForm, DeleteForm
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///feedback_db"
@@ -23,7 +22,7 @@ def home_page():
 
 @app.route('/register' , methods=['GET' , 'POST'])
 def register_form():
-    """Show register form and process the register form by adding a new user"""
+    """Show register form and process the registration form by adding a new user"""
     form = RegisterForm()   #in the form.py
 
     if form.validate_on_submit():    #getting all the data from the form
