@@ -1,7 +1,6 @@
 from flask import Flask, render_template, redirect, session
 from flask_debugtoolbar import DebugToolbarExtension
 from werkzeug.exceptions import Unauthorized
-
 from models import connect_db, db, User, Feedback
 from forms import RegisterForm, LoginForm, FeedbackForm, DeleteForm
 
@@ -22,7 +21,8 @@ def home_page():
 
 @app.route('/register' , methods=['GET' , 'POST'])
 def register_form():
-    """Show register form and process the registration form by adding a new user"""
+    """ Show register form and process the registration form by adding a new user """
+    
     form = RegisterForm()   #in the form.py
 
     if form.validate_on_submit():    #getting all the data from the form
@@ -45,7 +45,7 @@ def register_form():
 #### Didn't get this route ####
 @app.route('/login' , methods=['GET' , 'POST'])
 def login_form():
-    """ Show and process loginform"""
+    """ Show and process loginform """
 
     if "username" in session:
         return redirect(f"/users/{session['username']}")
@@ -73,7 +73,7 @@ def show_user(username):
     """Display a template the shows information about that user """
     if "username" not in session or username != session['username']:
         raise Unauthorized()
-    #to make sure that only logged in users can access this page
+    #to make sure that only logged-in users can access this page
 
     user = User.query.get(username)
     form = DeleteForm()
