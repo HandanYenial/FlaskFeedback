@@ -21,7 +21,7 @@ def home_page():
 
 @app.route('/register' , methods=['GET' , 'POST'])
 def register_form():
-    """ Show register form and process the registration form by adding a new user """
+    """ Show the register form and process the registration form by adding a new user """
     
     form = RegisterForm()   #in the form.py
 
@@ -70,7 +70,7 @@ def login_form():
 
 @app.route('/users/<username>')
 def show_user(username):
-    """Display a template the shows information about that user """
+    """Display a template that shows information about that user """
     if "username" not in session or username != session['username']:
         raise Unauthorized()
     #to make sure that only logged-in users can access this page
