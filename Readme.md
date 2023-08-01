@@ -1,1 +1,14 @@
-Flask FeedBack is an application that lets users sign up and log in to their own accounts. Once logged in, users can add feedback, edit their feedback, delete their feedback, and see a list of all feedback that they’ve given. Many of these routes should be protected, so that for example user1 can’t edit a piece of feedback that user2 created.
+#Flask Feedback
+
+**Introduction:**
+Flask FeedBack is a web application that allows users to sign up and log in to their individual accounts. Once logged in, users can provide feedback, edit their feedback, delete their feedback, and view a list of all the feedback they have submitted. To ensure data security and privacy, certain routes are protected to prevent unauthorized access. For instance, user1 cannot edit feedback created by user2.
+
+**Features:**
+1. **User Authentication:**
+   - Users can sign up and create their accounts.
+   - Existing users can log in with their credentials.
+
+2. **Feedback Management:**
+   - Logged-in users can submit feedback.
+   - Users can edit or update their own feedback.
+   - Feedback can be deleted by the user who submitted it.
