@@ -15,4 +15,4 @@ Flask FeedBack is a web application that allows users to sign up and log in to t
 
 3. **Feedback List:**
     - Users can view a list of all feedback they have provided.
-    - The list displays the feedback along with relevant details such as timestamps.
+      
