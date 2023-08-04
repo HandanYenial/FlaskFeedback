@@ -1,4 +1,4 @@
-#Flask Feedback
+# Flask Feedback
 
 **Introduction:**
 Flask FeedBack is a web application that allows users to sign up and log in to their individual accounts. Once logged in, users can provide feedback, edit their feedback, delete their feedback, and view a list of all the feedback they have submitted. Routes are protected to prevent unauthorized access. For instance, user1 cannot edit feedback created by user2.
@@ -15,4 +15,8 @@ Flask FeedBack is a web application that allows users to sign up and log in to t
 
 3. **Feedback List:**
     - Users can view a list of all feedback they have provided.
+
+4. **Access Control:**
+    - Routes and actions are protected to ensure data privacy.
+    - Users can only edit and delete the feedback they have submitted, not others'.
       
