@@ -27,3 +27,5 @@ Flask FeedBack is a web application that allows users to sign up and log in to t
 **/login**: Allows users to log in to their account with an email and password.
 
 **/users/username**: Shows information about the logged-in user.
+
+**/users/username/delete** : Removes the user from the database and delete all of their feedback.
